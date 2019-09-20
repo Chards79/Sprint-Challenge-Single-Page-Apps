@@ -3,8 +3,7 @@ import React, { useState } from "react";
 const SearchForm = props => {
 	console.log(props);
 	const [info, setInfo] = useState({
-		name: "",
-		status: ""
+		name: ""
 	});
 
 	const changeHandler = event => {
@@ -18,8 +17,8 @@ const SearchForm = props => {
 			...info,
 			id: Date.now()
 		};
-		props.addMember(newInfo);
-		setInfo({ name: "", status: "" });
+		props.filter(newInfo);
+		setInfo({ name: "" });
 	};
 	return (
 		<section className="search-form">
@@ -31,13 +30,7 @@ const SearchForm = props => {
 					value={info.name}
 					onChange={changeHandler}
 				/>
-				<label htmlFor="status">Status:</label>
-				<input
-					type="text"
-					name="status"
-					value={info.status}
-					onChange={changeHandler}
-				/>
+
 				<button className="search-button" type="submit">
 					Search
 				</button>
