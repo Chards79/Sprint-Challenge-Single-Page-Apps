@@ -28,7 +28,7 @@ export default function CharacterCard(props) {
 		<Card>
 			<span>
 				<h2>{props.getName}</h2>
-				<div>{props.getStatus}</div>
+				<div>Current Status: {props.getStatus}</div>
 			</span>
 		</Card>
 	);

@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList";
 import WelcomePage from "./components/WelcomePage";
+import SearchForm from "./components/SearchForm";
 
 export default function App() {
 	return (
@@ -12,6 +13,7 @@ export default function App() {
 			<div>
 				<Route exact path="/" component={CharacterList} />
 			</div>
+			<SearchForm />
 		</main>
 	);
 }
